@@ -1,0 +1,62 @@
+/* ------------------------------------
+   Global Theme Variables
+------------------------------------ */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --font-main: Arial, sans-serif;
+  --space-small: 8px;
+  --space-medium: 16px;
+}
+
+/* ------------------------------------
+   Dark Theme Overrides
+------------------------------------ */
+.dark-theme {
+  --bg-color: #111111;
+  --text-color: #f1f1f1;
+}
+
+/* ------------------------------------
+   Layout Styling
+------------------------------------ */
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: var(--space-medium);
+}
+
+header {
+  text-align: center;
+  padding: var(--space-small);
+  border-bottom: 1px solid var(--text-color);
+}
+
+/* Content */
+.content {
+  margin-top: var(--space-medium);
+  text-align: center;
+}
+
+.content p {
+  margin-bottom: var(--space-medium);
+  line-height: 1.6;
+}
+
+/* Center Button */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-medium);
+}
+
+button {
+  padding: var(--space-small) var(--space-medium);
+  border: none;
+  background: var(--text-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}

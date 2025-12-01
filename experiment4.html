@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="exp4.css">
+</head>
+<body id="page">
+
+  <header>
+    <h1>My Themed Layout</h1>
+  </header>
+
+  <div class="content">
+    <p>Welcome to our startup’s new themed layout experiment.</p>
+
+    <p>
+      This layout demonstrates how easily themes can change using  
+      CSS custom properties. With just one click, the whole look of the  
+      page switches without rewriting the styles.
+    </p>
+
+    <p>
+      The goal is to keep the design simple, clean, and easy to expand  
+      in the future for bigger projects.
+    </p>
+
+    <div class="button-wrapper">
+      <button onclick="switchTheme()">Switch Theme</button>
+    </div>
+  </div>
+
+  <script>
+    function switchTheme() {
+      document.getElementById("page").classList.toggle("dark-theme");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>experiment6</title>
+    <link rel="stylesheet" href="exp6.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="title">🌤️ Personalized Greeting</h2>
+
+        <input type="text" id="nameInput" placeholder="Enter your name">
+
+        <select id="moodInput">
+            <option value="">How are you feeling?</option>
+            <option value="happy">Happy 😊</option>
+            <option value="sad">Sad 😔</option>
+            <option value="excited">Excited 🤩</option>
+        </select>
+
+        <button onclick="showGreeting()">Show Greeting</button>
+
+        <p id="message" class="hidden"></p>
+    </div>
+
+    <script>
+        function showGreeting() {
+            const name = document.getElementById("nameInput").value;
+            const mood = document.getElementById("moodInput").value;
+            const msg = document.getElementById("message");
+
+            const hour = new Date().getHours();
+            let greet = (hour < 12) ? "Good Morning" :
+                        (hour < 18) ? "Good Afternoon" :
+                                      "Good Evening";
+
+            let moodMsg = "";
+            if (mood === "happy") moodMsg = "Your smile makes the day brighter!";
+            else if (mood === "sad") moodMsg = "I'm here for you. Stay strong.";
+            else if (mood === "excited") moodMsg = "Love that energy! Keep it up!";
+
+            msg.textContent = `${greet}, ${name}! ${moodMsg}`;
+
+            msg.classList.remove("hidden");
+            msg.classList.add("show");
+        }
+    </script>
+
+</body>
+</html>
